@@ -8,6 +8,7 @@ WORKDIR /shirasu
 COPY Gemfile /shirasu/Gemfile
 COPY Gemfile.lock /shirasu/Gemfile.lock
 RUN bundle install
+RUN bundle exec rails webpacker:install
 COPY . /shirasu
 
 COPY entrypoint.sh /usr/bin/

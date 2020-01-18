@@ -8,14 +8,14 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
+  database: shirasu_development
 
 test:
   <<: *default
-  database: myapp_test
+  database: shirasu_test
 
 production:
   <<: *default
-  database: myapp_production
-  username: myapp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  database: shirasu_production
+  username: shirasu
+  password: <%= ENV['SHIRASU_DATABASE_PASSWORD'] %>
