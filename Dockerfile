@@ -8,6 +8,11 @@ WORKDIR /shirasu
 COPY Gemfile /shirasu/Gemfile
 COPY Gemfile.lock /shirasu/Gemfile.lock
 RUN bundle install
+# build時にyarn installしても上手くいくと思うが上手くいかないので、
+# docker-compose.ymlのcommandに追記する
+# COPY package.json /shirasu/package.json
+# COPY yarn.lock /shirasu/yarn.lock
+# RUN yarn install
 COPY . /shirasu
 
 COPY entrypoint.sh /usr/bin/
