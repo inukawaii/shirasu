@@ -1,2 +1,8 @@
 <h1>Login#index</h1>
-<p>Find me in app/views/login/index.html.erb</p>
+
+# TODO： UserContollerに向かおうとするので、それをLoginController#loginに向けるように画面を修正する必要がある
+<%= form_with model: @user do | form | %>
+  <%=form.text_field :user_id %>
+<% end %>
+<input type="password">
+<button type="submit">ログイン</button>
