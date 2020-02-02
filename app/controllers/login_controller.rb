@@ -4,5 +4,6 @@ class LoginController < ApplicationController
   end
 
   def login
+    redirect_to controller: 'user', action: 'index'
   end
 end
