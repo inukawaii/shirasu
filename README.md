@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ログインするだけのアプリをモブプロで作ろう！
 
-Things you may want to cover:
+# Get Started
 
-* Ruby version
+Run the following commands to prepare your Docker dev env:
 
-* System dependencies
+```
+$ docker-compose build
+$ docker-compose run runner yarn install
+$ docker-compose run runner ./bin/setup
+```
 
-* Configuration
+It builds the Docker image, installs Ruby and NodeJS dependencies, creates database, run migrations and seeds.
 
-* Database creation
+You're all set! Now you're ready to code!
 
-* Database initialization
+## Commands
 
-* How to run the test suite
+- Running the app:
 
-* Services (job queues, cache servers, search engines, etc.)
+You can run the Rails up using the following command:
 
-* Deployment instructions
+```sh
+$ docker-compose up rails
+```
 
-* ...
+If you want to run Webpack Dev server as well:
+
+```sh
+$ docker-compose up rails webpacker
+```
+
+Thank you
+cf: https://github.com/evilmartians/chronicles-gql-martian-library 
+
