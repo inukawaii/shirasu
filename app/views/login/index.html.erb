@@ -1,10 +1,9 @@
 <h1>Login#index</h1>
 
-<form>
-  <label>ユーザID</label>
-  <input type="text"></input>
-  <label>パスワード</label>
-  <input type="password"></input>
-</form>
-
-<%= button_to "ログイン", action: "login" %>
+<%= form_for @user, url: login_login_path, html: {class: "nifty_form"} do |f| %>
+  <%= f.label :user_id, "ユーザID" %>
+  <%= f.text_field :user_id %>
+  <%= f.label :password, "パスワード" %>
+  <%= f.password_field :password %>
+  <%= f.submit "ログイン" %>
+<% end %>
