@@ -4,9 +4,7 @@ class LoginController < ApplicationController
   end
 
   def login
-    p user_params
-    p User.find_by(user_id:user_params[:user_id])
-    # p user_params[:user_id]
+    p User.find_by("")
     redirect_to controller: 'user', action: 'index'
   end
 
