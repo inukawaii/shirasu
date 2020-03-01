@@ -8,6 +8,7 @@ class LoginController < ApplicationController
     if user
       redirect_to controller: 'user', action: 'index'
     else
+      flash[:danger] = "ログインに失敗しました。"
       redirect_to controller: 'login', action: 'index'
     end
   end
